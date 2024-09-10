@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+  background-color: aliceblue;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+
+
+}
+
+.navbar.scrolled {
+  background-color: #333;
+}
+
+nav img {
+  width: 80px;
+}
+
+nav ul {
+  display: flex;
+  gap: 50px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.home {
+  background-image: url(/imgs/home-bg.jpg);
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 100px;
+}
+
+.home h1 {
+  width: 50%;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.what-do-we-do {
+  padding: 100px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.services-text {
+  width: 50%;
+}
+
+.service h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.what-do-we-do img {
+  width: 50%;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 30vh;
+  background-color: chocolate;
+}
+
+.packages {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.packages h1 {
+  margin-bottom: 30px;
+}
+
+.packs {
+  display: flex;
+  gap: 50px;
+}
+
+.pack {
+  height: 500px;
+  width: 300px;
+  row-gap: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.pack button {
+margin-top: auto;
+}
+
+
+li {
+  list-style: circle;
+}
+
+
