@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --primary-color: #06332b;
+  --secundary-color: #67bb5e;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,25 +12,52 @@
   font-family: "Montserrat", sans-serif;
 }
 
+button {
+  font-weight: bolder;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-radius: 9px;
+  background: #67bb5e;
+  border: none;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+ }
+ 
+button:hover {
+  box-shadow: 7px 5px 56px -14px #06332b;
+  background:  #06332b;
+  color: white;
+ }
+ 
+ button:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #06332b;
+ }
+
 nav {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 20px 50px;
   position: fixed;
-  background-color: aliceblue;
   top: 0;
   left: 0;
   z-index: 10;
   transition: background-color 0.3s ease;
 
+  
+
 
 }
 
 .navbar.scrolled {
-  background-color: #333;
+  background-color: var(--primary-color);
 }
 
 nav img {
@@ -43,12 +75,35 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
+  font-weight: bolder;
 }
 
 .home {
-  background-image: url(home-bg.jpg);
-  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.home {
+
 
   width: 100vw;
   height: 100vh;
@@ -96,7 +151,9 @@ nav a {
   justify-content: center;
   width: 100vw;
   height: 30vh;
-  background-color: chocolate;
+  background-color: #000000;
+  color: whitesmoke;
+  gap: 50px;
 }
 
 .packages {
@@ -120,23 +177,110 @@ nav a {
   gap: 50px;
 }
 
-.pack {
-  height: 500px;
-  width: 300px;
-  row-gap: 30px;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: aliceblue;
-  box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+/* From Uiverse.io by Yaya12085 */ 
+.plan {
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+  padding: 10px;
+  background-color: #fff;
+  color: #697e91;
+  max-width: 300px;
+}
 
+.plan strong {
+  font-weight: 600;
+  color: #425275;
+}
+
+.plan .inner {
+  align-items: center;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: #ecf0ff;
+  border-radius: 12px;
+  position: relative;
+}
+
+.plan .pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #bed6fb;
+  border-radius: 99em 0 0 99em;
+  display: flex;
+  align-items: center;
+  padding: 0.625em 0.75em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #425475;
+}
+
+.plan .pricing small {
+  color: #707a91;
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+
+.plan .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #425675;
+}
+
+.plan .title + * {
+  margin-top: 0.75rem;
+}
+
+.plan .info + * {
+  margin-top: 1rem;
+}
+
+.plan .features {
   display: flex;
   flex-direction: column;
 }
 
-
-.pack button {
-margin-top: auto;
+.plan .features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+.plan .features li + * {
+  margin-top: 0.75rem;
+}
+
+.plan .features .icon {
+  background-color: var(--secundary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.plan .features .icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.plan .features + * {
+  margin-top: 1.25rem;
+}
+
+.plan .action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan button {
+  width: 100%;
+}
+
 
 
 li {
