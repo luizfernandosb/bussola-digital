@@ -95,12 +95,12 @@ nav a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   height: auto;
   z-index: -1;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .home {
@@ -112,6 +112,22 @@ nav a {
   justify-content: start;
   padding: 100px;
 }
+
+.home-text {
+  padding-left: 100px;
+}
+
+.home-text p {
+  font-weight: 100;
+  color: whitesmoke;
+  width: 30%;
+  margin-bottom: 30px;
+}
+.home-text p strong{
+  color: red;
+  font-weight: bold;
+}
+
 
 .home h1 {
   width: 50%;
@@ -139,7 +155,7 @@ strong {
 
   padding: 100px;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -151,15 +167,55 @@ strong {
   margin-bottom: 20px;
 }
 
+.aboutus p {
+  font-weight: 100;
+}
+
 .aboutus span {
   font-weight: bold;
 }
 .aboutus-text {
-  width: 50%;
   text-align: center;
 }
 
+.cards {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card {
+  margin-top: 50px;
+  padding: 50px 0px;
+  height: 366px;
+  width: 270px;
+  background-color: transparent;
+  border-radius: 15px;
+  border: 2px solid #9CFF4A;
+  box-shadow: 0px 0px 27px -13px rgba(123,240,27,1);
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#name {
+  margin-top: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#position {
+  font-size: 14px;
+}
+
 .cta {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
